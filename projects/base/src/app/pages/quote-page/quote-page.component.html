@@ -1,0 +1,25 @@
+<p>
+  Add a component Dynamically using Dynamic Component Service
+</p>
+
+<div class="row mb-3">
+  <div class="col-6">
+    <button class="btn btn-dark w-100"
+            (click)="addDynamicComponent('base-quote-one')">Add Base Quote One
+    </button>
+  </div>
+  <div class="col-6">
+    <button class="btn btn-dark w-100"
+            (click)="addDynamicComponent('base-quote-two')">Add Base Quote Two
+    </button>
+  </div>
+</div>
+<div #container></div>
+
+
+<b>Base Quote Two is automatically loaded here: </b>
+<base-dynamic-selector [inputs]="{inputValue: 'My Input Value'}"
+                       [componentSelector]="'base-quote-one'"
+                       [moduleLoaderFunction]="getModuleLoader()"
+></base-dynamic-selector>
+

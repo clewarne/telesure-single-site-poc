@@ -1,0 +1,17 @@
+
+.base-quote-one {
+  background: pink;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 10px;
+
+  &:after {
+    content: 'Autogen Quote One Component - Extends from base component, uses base template and added content via just css'
+  }
+}
+
+:host ::ng-deep {
+  p {
+    color: orange !important;
+  }
+}
